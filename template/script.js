@@ -1,8 +1,8 @@
 $(document).ready(function(){
-
     var quiz = window.location.pathname.split("/")[2];
-    qId = Cookies.get(quiz);
-    if (qId == null) { qId = 0; }
+    var nonce = 45742;
+    var qId = atob(Cookies.get(quiz))-nonce;
+    if (qId == null || isNaN(qId)) { qId = 0; }
 
 
     // Get from db
@@ -25,7 +25,7 @@ $(document).ready(function(){
             
             if (data == null) {
                 // No more questions
-                Cookies.set(quiz, 0, { expires: 14 });
+                Cookies.set(quiz, btoa(0+nonce), { expires: 14 });
                 window.location.reload();
             } else {
                 // Results returned
@@ -71,7 +71,7 @@ $(document).ready(function(){
 
         if (userAnswer == answer) {
             // Svar er korrekt
-            Cookies.set(quiz, id, { expires: 14 });
+            Cookies.set(quiz, btoa(id+nonce), { expires: 14 });
             window.location.reload();
         } else {
             // Svar er forkert
