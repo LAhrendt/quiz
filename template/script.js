@@ -2,7 +2,6 @@ $(document).ready(function(){
     var quiz = window.location.pathname.split("/")[2];
     var nonce = 45742;
     var qId = Cookies.get(quiz);
-    var qId = atob(Cookies.get(quiz))-nonce;
     try {
         qId = atob(qId)-nonce;
     } catch {
