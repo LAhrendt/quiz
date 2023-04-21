@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var quiz = window.location.pathname.split("/").pop().split(".")[0];
+    var quiz = window.location.pathname.split("/")[3].split(".")[0];
     var nonce = 45742;
     var qId = Cookies.get(quiz);
     try {
