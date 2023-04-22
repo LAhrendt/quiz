@@ -20,4 +20,4 @@ Du kan læse mere [på denne side](https://github.com/showdownjs/showdown/wiki/S
 
 Der er MathJax på denne side, dvs. man kan faktisk lave pæn matematik. Syntaksen er [som i LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
 
-Selve matematikken skal omsluttes i to firkantede parenteser, fx `[[f(x) = \frac{1}{2} \cdot m \cdot v^2]]`.
+Selve matematikken skal omsluttes i to firkantede parenteser, fx `[[E_kin = \frac{1}{2} \cdot m \cdot v^2]]`.
