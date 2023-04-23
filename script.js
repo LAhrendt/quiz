@@ -57,6 +57,7 @@ $(document).ready(function(){
                     }
                 }
                 populate(title, text, id, image);
+                MathJax.typeset();
             }
         } else {
             // Bad response from db
