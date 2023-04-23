@@ -124,7 +124,6 @@ $(document).ready(function(){
         } else {
             $("#image").hide();
         }
-        MathJax.typeset();
     }
 
     function b64EncodeUnicode(str) {
