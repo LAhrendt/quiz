@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    window.MathJax = {
+        tex: {
+            inlineMath: [['[[', ']]']]
+        }
+    };
+
     var quiz = window.location.pathname.split("/").pop().split(".")[0];
     var nonce = 45742;
     var qId = Cookies.get(quiz);
@@ -101,6 +107,7 @@ $(document).ready(function(){
         } else {
             $("#image").hide();
         }
+        MathJax.typeset();
     }
 
     function b64EncodeUnicode(str) {
@@ -112,10 +119,4 @@ $(document).ready(function(){
                 return String.fromCharCode('0x' + p1);
         }));
     }
-
-    window.MathJax = {
-        tex: {
-          inlineMath: [['[[', ']]']]
-        }
-      };
 });
