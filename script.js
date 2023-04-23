@@ -1,9 +1,11 @@
 $(document).ready(function(){
+    /*
     window.MathJax = {
         tex: {
             inlineMath: [['[[', ']]']]
         }
     };
+    */
 
     var quiz = window.location.pathname.split("/").pop().split(".")[0];
     var nonce = 45742;
