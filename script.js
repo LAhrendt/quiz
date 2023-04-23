@@ -66,7 +66,7 @@ $(document).ready(function(){
                 }
                 populate(title, text, id, image);
 
-                if (text.match("[[")) {
+                if (text.includes("[[")) {
                     console.log("[[ registreret");
                     if (!window.MathJax) {
                         console.log("Ikke window.MathJax");
