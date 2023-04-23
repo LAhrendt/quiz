@@ -1,6 +1,6 @@
 # Quiz
 
-Dette er en hjemmeside til at lave quizzer der er gemt i en database på DBhub. Fordelen ved denne hjemmeside er, at det kun kræver hosting af en statisk hjemmeside (fx via Github).
+Dette er en hjemmeside til at lave quizzer der er gemt i en database på DBhub.io. Fordelen ved denne hjemmeside er, at det kun kræver hosting af en statisk hjemmeside (fx via Github).
 
 Du kan se hjemmesiden på [LAhrendt.github.io/quiz/](https://lahrendt.github.io/quiz/).
 
