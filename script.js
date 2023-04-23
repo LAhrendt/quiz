@@ -67,7 +67,9 @@ $(document).ready(function(){
                 populate(title, text, id, image);
 
                 if (text.match("[[")) {
+                    console.log("[[ registreret");
                     if (!window.MathJax) {
+                        console.log("Ikke window.MathJax");
                         window.MathJax = {
                             tex: {
                                 inlineMath: [['[[', ']]']]
@@ -77,6 +79,7 @@ $(document).ready(function(){
                     var script = document.createElement('script');
                     script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
                     document.head.appendChild(script);
+                    console.log("Sidste linje.");
                 }
             }
         } else {
