@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<title>En lille quiz...</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS and theme, change color if you like (eg xmas: red, summer: amber) -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
+
+<!-- jQuery and local script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js" integrity="sha512-wT7uPE7tOP6w4o28u1DN775jYjHQApdBnib5Pho4RB0Pgd9y7eSkAV1BTqQydupYDB9GBhTcQQzyNMPMV3cAew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
+
+<!-- Showdown (for MarkDown formatting) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- MathJax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" integrity="sha512-6FaAxxHuKuzaGHWnV00ftWqP3luSBRSopnNAA2RvQH1fOfnF/A1wOfiUWF7cLIOFcfb1dEhXwo5VG3DAisocRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a href="/quiz/" class="w3-bar-item w3-button w3-theme-l1">Quiz</a>
+        <div class="w3-bar-item">1v's julequiz</div>
+        <button class="w3-bar-item w3-button" style="font-style: italic;" id="helpOpen">Hjælp</button>
+    </div>
+</div>
+
+<!-- Modal with help -->
+<div id="help" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top">
+        <header class="w3-container w3-theme">
+            <span id="helpClose" class="w3-button w3-display-topright w3-large">&times;</span>
+            <h2>Hjælp til quizzen</h2>
+        </header>
+  
+        <div class="w3-container">
+            <p>Når du skal angive dit svar, er det ligegyldigt om du bruger store eller små bogstaver - men det er vigtigt at du staver korrekt.</p>
+            <p>Du skal ikke angive yderligere tegnsætning i dit svar, fx skal du ikke afslutte dit svar med et punktum.</p>
+            <p>Hvis svaret er et tal, skal det (medmindre andet fremgår) angives i den korrekte SI-enhed, dog uden at skrive selve enheden på - dvs. du skal kun angive selve tallet som svar.</p>
+            <p>Hvis svaret er et kommatal skal du bruge komma som decimalseparator. Du skal ikke bruge tusindtalsseparator.</p>
+        </div>
+    </div>
+</div> 
+
+
+<!-- Content -->
+<div class="w3-main">
+    <div class="w3-row w3-padding-64">
+        <div class="w3-container w3-hide-small w3-col m1 l1"></div>
+        <div class="w3-container w3-col m8 l6">
+            <p class="w3-small" style="font-style: italic" id="id"></p>
+
+            <h1 class="w3-xxxlarge" id="title"></h1>
+    
+            <div id="text"></div>
+            
+            <img src="" style="display: none;" class="w3-image" id="image">
+
+            <form class="w3-container w3-card w3-theme-light w3-margin-top w3-padding-16" id="formAnswer">
+                <label>Dit svar:</label>
+                <input type="text" class="w3-input w3-border" id="answer">
+                <div style="display: none;" class="w3-panel w3-leftbar w3-border-red w3-light-gray" id="panel"><p></p></div>
+                <p><input type="submit" value="Tjek dit svar" class="w3-button w3-theme-dark"></p>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
